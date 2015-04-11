@@ -51,6 +51,15 @@ public class MinionsBoredGameTest {
     }
 
     @Test
+    public void tEqualN15() {
+        int t = 15;
+        int n = 15;
+
+        int result = MinionsBoredGame.answer(t, n);
+        assertEquals(15, result);
+    }
+
+    @Test
     public void googleTest2() {
         int t = 3;
         int n = 2;
@@ -93,7 +102,42 @@ public class MinionsBoredGameTest {
         int n = 3;
 
         int result = MinionsBoredGame.answer(t, n);
+        assertEquals(15, result);
+    }
+
+    @Test
+    public void upperBoundary() {
+        int t = 1000;
+        int n = 1000;
+
+        int result = MinionsBoredGame.answer(t, n);
+        assertEquals(1000, result);
+    }
+
+    @Test
+    public void upperBoundary2() {
+        int t = 1000;
+        int n = 2;
+
+        int result = MinionsBoredGame.answer(t, n);
+        assertEquals(1000, result);
+    }
+
+    @Test
+    public void lowerBoundary() {
+        int t = 0;
+        int n = 2;
+
+        int result = MinionsBoredGame.answer(t, n);
         assertEquals(0, result);
     }
 
+    @Test
+    public void middle() {
+        int t = 15;
+        int n = 10;
+
+        int result = MinionsBoredGame.answer(t, n);
+        assertEquals(20636, result);
+    }
 }
