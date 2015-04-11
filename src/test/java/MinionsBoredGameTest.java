@@ -140,4 +140,13 @@ public class MinionsBoredGameTest {
         int result = MinionsBoredGame.answer(t, n);
         assertEquals(20636, result);
     }
+
+    @Test
+    public void smallBoardManyRolls() {
+        int t = 1000;
+        int n = 500;
+
+        int result = MinionsBoredGame.answer(t, n);
+        assertEquals(20636, result);
+    }
 }
